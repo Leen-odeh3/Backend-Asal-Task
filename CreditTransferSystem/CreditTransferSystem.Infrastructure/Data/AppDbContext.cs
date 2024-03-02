@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using CreditTransferSystem.Domain.Models;
 
 namespace CreditTransferSystem.Infrastructure.Data
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions option) : base(option) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+        public DbSet<TransferredCredits> TransferredCredits { get; set; }
     }
 }
