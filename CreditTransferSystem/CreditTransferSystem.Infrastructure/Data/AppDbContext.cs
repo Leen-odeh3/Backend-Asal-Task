@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace CreditTransferSystem.Infrastructure.Data
 {
-    public class AppDbContext
+    public class AppDbContext: DbContext
     {
-        public AppDbContext()
-        {
-            
-        }
+        public AppDbContext(DbContextOptions option) : base(option) { }
+
     }
 }
