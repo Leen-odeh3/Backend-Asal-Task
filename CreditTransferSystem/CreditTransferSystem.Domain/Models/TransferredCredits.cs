@@ -8,6 +8,7 @@ namespace CreditTransferSystem.Domain.Models
 {
     public class TransferredCredits
     {
+        public int Id { get; set; }
         public string StateOrTerritory { get; set; }
         public string InstitutionName { get; set; }
         public string ProgramType { get; set; }
