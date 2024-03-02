@@ -8,5 +8,9 @@ namespace CreditTransferSystem.Infrastructure.Data
 {
     public class AppDbContext
     {
+        public AppDbContext()
+        {
+            
+        }
     }
 }
