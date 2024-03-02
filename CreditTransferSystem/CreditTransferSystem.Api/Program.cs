@@ -1,4 +1,6 @@
+using CreditTransferSystem.Domain.IGenericRepository;
 using CreditTransferSystem.Infrastructure.Data;
+using CreditTransferSystem.Infrastructure.GenericRepository;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,7 +12,9 @@ namespace CreditTransferSystem.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-           
+            builder.Services.AddCors();
+
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             // Add services to the container.
 
